@@ -1,48 +1,132 @@
-*{
-    /*bloco de reset*/
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4; /*cor em hexadecimal*/
-}
-header{
-    background-color: #c8c8c8;/*cinza cocô kkk */
-    color: #ffff;/* branco em hexadecimal*/
-    text-align: center;;/*centraliza o texto*/
-}
-nav a{ /*nav navigation a a, de link, vou trabalhar só no link*/
-    color: blue;
-    text-decoration: none; /*tirei toda a decoração do texto*/
-    padding: 4px;
-}
-.bloco{ /*declaração de class, a class procede de *.."*/
-    background-color: #cccc;
-    color: black;
-    border: 1px dotted #a3a3a3; /* borda geral tracejada*/
-    border-radius: 6px;
-    padding: 16px;
-    margin-bottom: 16px; 
-    border-top: 2px solid #d8d; /*borda superior solida */
-
+    background: #e8e8e8;
+    color: #222;
+    line-height: 1.5;
 }
 
-#galeria{
+header {
+    text-align: center;
+    padding: 1rem;
+    background: #c0c0c0;
+    color: #000;
+    border-bottom: 2px solid #808080;
+}
+
+header h1 {
+    margin: 0 0 0.25rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #000;
+}
+
+header p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    justify-content: flex-start;
-    padding: 20px;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    background: #d3d3d3;
+    border-bottom: 1px solid #999;
 }
 
-.foto{
-    background: #ffffff;
-    padding: 12px 12px 20px 12px;
-    border: 1px solid #dddddd;
-    box-shadow: 0 4px 10px #000000;
-    text-align: center;
+nav a {
+    color: #0000cd;
+    text-decoration: none;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    color: #000080;
+    background: #fff;
+}
+
+nav a:focus-visible {
+    outline: 1px dotted #333;
+    outline-offset: 2px;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem;
+}
+
+.bloco {
+    background: #fff;
+    color: #222;
+    border: 1px dotted #666;
+    border-top: 2px solid #999;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bloco h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.bloco p {
+    margin: 0;
+    color: #333;
+}
+
+.bloco ul,
+.bloco ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #333;
+}
+
+.bloco li {
+    margin-bottom: 0.25rem;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.foto {
+    background: #fff;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    width: 220px;
+    max-width: 100%;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.foto:hover {
+    transform: scale(1.04) rotate(-1deg);
+    border-color: #666;
+    box-shadow: 0 4px 10px #888;
 }
 
 .foto img {
@@ -50,4 +134,26 @@ nav a{ /*nav navigation a a, de link, vou trabalhar só no link*/
     height: 220px;
     object-fit: cover;
     display: block;
+    border: 1px solid #ccc;
+}
+
+.legenda {
+    margin-top: 0.5rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    color: #333;
+    background: #d3d3d3;
+    border-top: 1px solid #999;
+}
+
+footer p {
+    margin: 0;
 }
